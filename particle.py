@@ -16,7 +16,7 @@ screen_width = 1280
 screen_height = 720
 
 screen = pygame.display.set_mode((screen_width, screen_height), pygame.SCALED | pygame.FULLSCREEN)
-pygame.display.set_caption('Flame Sparks Testing')
+pygame.display.set_caption('Particle System')
 
 clock = pygame.time.Clock()
 FPS = 60
@@ -150,9 +150,7 @@ img = pygame.image.load('images/starry_night.jpg').convert()
 show_img = pygame.image.load('images/starry_night_rendered.jpg').convert()
 img = pygame.transform.scale(img, (1280, 720))
 show_img = pygame.transform.scale(show_img, (1280, 720))
-print('Loading Points...')
 points = extract_points_from_img(img, color_ranges)
-print('Points Loaded')
 print(len(points))
 
 def remove_point_cluttering(point_list):
@@ -160,15 +158,9 @@ def remove_point_cluttering(point_list):
     point_list = [i for i in point_list if point_list.index(i) % 10 == 0]
     return point_list
 
-
-print('Removing Point Cluttering')
 points = remove_point_cluttering(point_list=points)
-print('Point Cluttering Reduced')
-
-print('Shifting all points to center')
 for p in points:
     p[0] += screen_width // 2 - img.get_width() // 2
-print('All points shifted to center')
 
 points1 = [[430 + 70 * math.cos(math.radians(i)), 400 + 70 * math.sin(math.radians(i))] for i in range(360)]
 points1 += [[430 + 50 * math.cos(math.radians(i)), 400 + 50 * math.sin(math.radians(i))] for i in range(0, 360, 2)]
@@ -273,5 +265,5 @@ if __name__ == "__main__":
         for i in flames:
             i.draw_particle(dt)
         pygame.display.update()
-        pygame.display.set_caption('Flame Particles Testing FPS = ' + str(int(clock.get_fps())))
+        pygame.display.set_caption('Particles System FPS = ' + str(int(clock.get_fps())))
         dt = TARGET_FPS * clock.tick(FPS) * 0.001

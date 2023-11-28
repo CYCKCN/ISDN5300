@@ -8,4 +8,5 @@ This file is used to generate particle system for dynamically represent rendered
 `python particle.py`
 3. images
 ### Results
-<video src="images/Final_Results.mp4" width="1280" height="720" controls></video>
+https://github.com/CYCKCN/ISDN5300/assets/29916535/3a0f3909-d66c-47e6-8ba3-6f32424234e3
+

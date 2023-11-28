@@ -6,6 +6,6 @@ This file is used for painterly rendering.
 2. particle.py
 This file is used to generate particle system for dynamically represent rendered images.
 `python particle.py`
-3. images/
+3. images
 ### Results
-<video src="images/Final_Results.mp4.mp4" width="1280" height="720" controls></video>
+<video src="images/Final_Results.mp4" width="1280" height="720" controls></video>

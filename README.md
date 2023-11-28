@@ -1,6 +1,6 @@
 # ISDN5300 Dynamic Painingts
 ### File List
-1. painterly.py
+1. painterly.py <br>
 This file is used for painterly rendering.
 `python painterly.py --img images/starry_nights.jpg --output images/starry_nights_rendered.jpg`
 2. particle.py
